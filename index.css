@@ -1,0 +1,234 @@
+.navbar{
+	background-color: rgb(245, 241, 255);
+	height:80px;
+	margin:20px;
+	border-radius:16px;
+	opacity: 50%;
+}
+.navbar-brand{
+    font-weight:500;
+    font-size:30px;
+    color: #9555f6;;
+}
+.navbar-brand:hover,.navbar-brand.active{
+    color:rgb(158, 145, 255);
+}
+.profile {
+    position: absolute;
+    right:5%; /* Adjust this value to move the image horizontally */
+    top: 10%;  /* Adjust this value to move the image vertically */
+    transform: translateY(20%);
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display:flex;
+}
+
+
+.narbar-toggler{
+    border:none;
+    font-size:1.25rem;
+}
+.narbar-toggler:focus,.btn-close:focus{
+    box-shadow:none;
+    outline:none;
+}
+/* HOME END SECTION */
+.nav-link{
+    color:rgba(100, 62, 238, 0.94);
+    font-weight:700;
+}
+.nav-link:hover,.nav-link.active{
+    color:rgb(158, 145, 255);
+}
+@media(min-width:991px){
+    .nav-link::before{
+        content:"";
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform:translateX(-50%);
+        width:0;
+        height:2px;
+        background-color:rgb(198, 144, 255);
+        visibility:hidden;
+        transition:0.3s ease-in-out;
+    }
+    .nav-link:hover::before{
+        width:100%;
+        visibility:visible;
+    }
+}
+/* me section */
+.me{
+	background:url(profile.jpg) no-repeat center;
+	background-size: cover;
+	width:100%;
+	height: 100vh;
+	opacity: 90%;
+}
+/* .me::before{
+	background-color: #0000007a;
+	content:"";
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+} */
+/* Home start section */
+.home {
+    height:100%;
+    display:flex;
+    align-items:center;
+    padding:10px 40px 40px 8;
+	margin-left: auto;
+	width: 65%;
+	/* background-color: aliceblue;
+	opacity:50%;
+	box-sizing: border-box; */
+	
+}
+
+.introduction{
+    max-width:600px;
+	margin-left: 10%;
+}
+.introduction h1{
+    font-size:50px;
+    font-weight:800;
+	color:#04000a;
+	background-color: rgb(245, 241, 255);
+	margin:20px;
+	border-radius:10px;
+	opacity: 70%;
+}
+.introduction p{
+    font-size:20px;
+	color:#06000e;
+	background-color: rgb(245, 241, 255);
+	margin:20px;
+	border-radius:10px;
+	opacity: 70%;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+/* Projects section */
+#projects .projects {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#projects .projects-header h1 {
+	margin-bottom: 50px;
+}
+#projects .all-projects {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#projects .project-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+#projects .project-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	color: white;
+}
+#projects .project-info h1 {
+	margin: 0;
+    padding: 0;
+	font-size: 2.5rem;
+	font-weight: 500;
+}
+#projects .project-info h2 {
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin-top: 10px;
+}
+
+#projects .project-info h3 {
+	font-size: 1rem;
+	font-weight: 400;
+	margin-top: 10px;
+}
+#projects .project-info h4 {
+	font-size: 0.9rem;
+	font-weight: 350;
+	margin-top: 10px;
+	color:#817ff3;
+}
+
+#projects .project-info p {
+	font-size: 0.8rem;
+	font-weight: 300;
+	color: white;
+}
+#projects .project-img {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+#projects .project-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 0.3s ease transform;
+}
+#projects .project-item:hover .project-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: scale(1.1);
+}
+/* End Projects section */
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	/* Project */
+	#projects .project-item {
+		flex-direction: row;
+	}
+	#projects .project-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#projects .project-item {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .all-projects .project-info {
+		height: 100%;
+	}
+	#projects .all-projects .project-img {
+		height: 100%;
+	}
+	/* End Project */
+
+
+}
